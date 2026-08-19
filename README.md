@@ -9,6 +9,11 @@ This project demonstrates end-to-end data modeling — from raw CSV ingestion to
 - **Fact Table:** FactVisit — tracks patient visits with deduplication logic using ROW_NUMBER() OVER (PARTITION BY VisitID)
 - **Dimensions:** DimPatient, DimDoctor, DimWard, DimDate
 - **Snowflake Extension:** DimDepartment branching off DimDoctor
+ ## Schema Diagram
+![Star Schema](schema.png)
+
+
+ 
 
 ## Key Techniques
 - DimDate built as a 1,096-row calendar (2023–2025) using ROW_NUMBER() date generator
